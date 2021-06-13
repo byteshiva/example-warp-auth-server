@@ -29,7 +29,7 @@ async fn main() {
         .and_then(login);
 
     let routes = register.or(login);
-    warp::serve(routes).run(([127, 0, 0, 1], 3030)).await;
+    warp::serve(routes).run(([0, 0, 0, 0], 3030)).await;
 }
 
 async fn register(
